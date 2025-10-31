@@ -1,0 +1,181 @@
+/* === Variabel Warna & Font === */
+:root {
+  --forest-dark: #0b1d15;
+  --forest-green: #1f4d2b;
+  --forest-light: rgba(255, 255, 255, 0.1);
+  --text-light: #e9f5ec;
+  --accent: #8fe388;
+  --font-main: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: linear-gradient(to bottom, var(--forest-dark), #112319);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+/* === Navbar === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.logo {
+  font-weight: 700;
+}
+
+/* === Hero === */
+.hero {
+  background: url('https://images.unsplash.com/photo-1491147334573-44cbb4602074?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974')
+    center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.hero-content {
+  text-align: center;
+  color: var(--text-light);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.hero button {
+  background: var(--accent);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+.hero button:hover {
+  background: #7ee177;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* === Glass Effect === */
+.glass {
+  background: var(--forest-light);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* === Features === */
+.features {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* === About === */
+.about {
+  margin: 80px auto;
+  max-width: 800px;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* === Join === */
+.join {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--forest-green);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: var(--font-main);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+button[type="submit"] {
+  background: var(--accent);
+  color: #0c1e13;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #7ee177;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  background: #09140f;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #b9cdb8;
+}
